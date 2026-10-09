@@ -15,7 +15,7 @@ description: Print a compact thread-tracker block when a session has grown sever
 
 **1. You invoke it yourself, unprompted.** That is the design. The user should not have to notice they are losing track — **by the time they notice, the thread is already dropped.** Watch for the trigger below and start the block without being asked.
 
-**2. `/thread-tracker`, by hand**, when the trigger did not fire. ⚠ **A manual invocation is a signal you missed one** — start the block, and do not defend the miss.
+**2. `/thread-tracker`, by hand**, when the trigger did not fire. ⚠ **A manual invocation is a signal you missed one** — start the block, and do not defend the miss. If a block is already running, a row fell out: find it, say so, add it.
 
 ## When to start
 
@@ -63,11 +63,13 @@ Put it at the **end** of the reply, after the substance. It is a footer, not a h
 4. **A ruled thread shows once more, then drops.** Otherwise the block only ever grows.
 5. **Cap it at about seven.** Past that, say plainly that the session is carrying too much and offer to split it or hand part of it off.
 6. **Do not re-sort by priority each turn.** Stable letters, stable order. The user is reading positionally.
+7. ⭐ **Rebuild the block from the conversation each turn — never copy last turn's table forward.** A copied table keeps a missing row missing for good. A ruling that creates work opens a row the moment it is made.
 
 ## The traps
 
-1. ⛔⛔ **Never mark a thread ✅ that the user has not actually ruled.** Agreement is not evidence, and neither is silence: a question that was asked, went unanswered, and is then shown as settled **vanishes for good**, and it looks deliberate. If you are unsure, it is ⏳.
+1. ⛔⛔ **Never mark a thread ✅ that the user has not actually ruled.** Agreement is not evidence, and neither is silence: a question that was asked, went unanswered, and is then shown as settled **vanishes for good**, and it looks deliberate. If you are unsure, it is ⏳. **Quiet is not closure** either: a row nobody has mentioned for six turns stays until it is ruled.
 2. ⛔ **The block is not a to-do list.** A to-do is work you do next. A thread is something the user owns. Mixing the two makes a long list that nobody can act on.
 3. ⛔ **Do not invent threads to fill the table.** Three real ones beat seven padded.
 4. ⛔ **The block does not replace writing things down.** It is ephemeral and dies with the context. **A ruling belongs in the PRD, the issue or the doc it governs**, and the block is a pointer to work still owed, never the record of it.
 5. ⚠ **Do not restate the substance in the block.** One row per thread, five words. The detail is in the reply above it, or in the file the ruling landed in.
+6. ⛔ **A row is five words; the question behind it is not.** Before you record a row's answer as a ruling anywhere, restate the full question in one sentence, so the user can correct the scope.
